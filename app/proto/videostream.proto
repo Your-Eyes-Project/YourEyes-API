@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package videostream;
+
+// The frame message to be sent from the client to the server
+message VideoFrame {
+    bytes y_plane = 1;  // Y plane data
+    bytes u_plane = 2;  // U plane data
+    bytes v_plane = 3;  // V plane data
+    int32 y_width = 4;  // Width of the Y plane
+    int32 y_height = 5; // Height of the Y plane
+}
+
+// The response message that indicates success or failure and includes detection results
+message StreamStatus {
+    bool success = 1;
+    string message = 2;
+    repeated DetectionResult detections = 3;
+}
+
+// A message that represents a single detection result
+message DetectionResult {
+    string label = 1;
+    string direction = 2;
+    string distance = 3;
+}
+
+// Service definition for streaming video frames and receiving stream statuses
+service VideoStreamer {
+    rpc StreamVideo(stream VideoFrame) returns (stream StreamStatus);
+}
+
+// Service definition for setting up the detection configuration
+service ConfigurationService {
+    rpc SetupDetection(SetupRequest) returns (SetupResponse);
+}
+
+// Request message for configuring the detection settings
+message SetupRequest {
+    string user_question = 1;
+    bool filter_objects = 2;  // Whether to filter objects based on user question
+}
+
+// Response message for the setup detection request
+message SetupResponse {
+    bool success = 1;
+    string message = 2;  // Can be 'Ready to stream' or 'Setup failed: reason'
+    repeated string objects_to_detect = 3;  // Objects to detect
+}

@@ -1,0 +1,5 @@
+grpcio==1.62.2
+numpy==1.26.4
+opencv_python==4.9.0.80
+protobuf==5.27.0
+ultralytics==8.2.2
