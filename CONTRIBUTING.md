@@ -102,7 +102,7 @@ Ensure that your changes do not break existing functionality by running tests. I
 
 Join our community to discuss features, improvements, and issues. You can:
 
-- **Ask Questions**: Use the [GitHub Discussions](https://github.com/Your-Eyes-Project/YourEyes-API/discussions) to ask questions and get help from the community.
+- **Ask Questions**: Use the [GitHub Discussions](https://github.com/orgs/Your-Eyes-Project/discussions) to ask questions and get help from the community.
 - **Share Ideas**: Suggest new features or enhancements on the discussions page.
 - **Stay Updated**: Follow the repository to get notifications about new releases and updates.
 
