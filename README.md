@@ -33,7 +33,6 @@ This document lists tasks and features we plan to work on in the future. Communi
 ## High Priority
 
 - [ ] **Support for multiple video formats**: Extend support for additional video formats beyond YUV420.
-- [ ] **Implement video frame caching**: Add a mechanism to cache video frames for better performance.
 - [ ] **Fix Docker containerization**: Resolve the issues with containerizing the application using Docker.
 
 ## Medium Priority
