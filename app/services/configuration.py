@@ -4,7 +4,7 @@ import app.proto.videostream_pb2_grpc as videostream_pb2_grpc
 
 class ConfigurationService(videostream_pb2_grpc.ConfigurationServiceServicer):
 
-    def SetupDetection(self, request, context):
+    def SetupDetection(self, request):
         user_question = request.user_question.lower()
         print("Received question:", user_question)
 
