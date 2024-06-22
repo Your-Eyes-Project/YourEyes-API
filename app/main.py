@@ -27,9 +27,9 @@ async def serve():
     videostream_pb2_grpc.add_ConfigurationServiceServicer_to_server(configuration_service, server)
 
     # Bind the server to the specified port
-    server.add_insecure_port('[::]:5270')
+    server.add_insecure_port('[::]:24476')
     
-    logging.info("Server is starting on port 5270...")
+    logging.info("Server is starting on port 24476...")
     
     # Start the server
     await server.start()

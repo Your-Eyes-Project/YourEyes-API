@@ -21,8 +21,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the current directory contents into the container at /app
 COPY . .
 
-# Make port 5270 available to the world outside this container
-EXPOSE 5270
+# Make port 24476 available to the world outside this container
+EXPOSE 24476
 
 # Define environment variable
 ENV PYTHONUNBUFFERED=1

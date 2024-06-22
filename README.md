@@ -38,7 +38,7 @@ This document lists tasks and features we plan to work on in the future. Communi
 
 ## Medium Priority
 
-- [ ] **Integrate Word2Vec for semantic matching**: Enhance the function that processes user questions to use Word2Vec for better semantic matching. This will allow the system to understand and map synonyms or related terms (e.g., mapping "television" to "tvmonitor").
+- [x] **Integrate word approximation for semantic matching**: Enhance the function that processes user questions to use semantic matching. This will allow the system to understand and map synonyms or related terms (e.g., mapping "television" to "tvmonitor").
 - [ ] **Add unit tests for gRPC services**: Enhance test coverage by adding unit tests for the `StreamVideo` and `SetupDetection` services.
 - [ ] **Improve error handling**: Refactor the codebase to provide more robust error handling and logging.
 
@@ -93,7 +93,7 @@ To set up the YourEyes-API locally, follow these steps:
 4. **Build and Run with Docker (if using Docker)**
     ```bash
     docker build -t youreyes-api .
-    docker run -p 5270:5270 youreyes-api
+    docker run -p 24476:24476 youreyes-api
 ## Usage
 
 ### Run the Server
